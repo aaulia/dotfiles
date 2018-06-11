@@ -190,8 +190,8 @@ bar {
 bindsym XF86Sleep exec betterlockscreen --lock dimblur
 bindsym XF86HomePage exec firefox
 bindsym XF86Search exec rofi -show drun
-bindsym $mod+Print exec scrot ~/Pictures/%Y-%m-%d_%H-%M-%S.png
-bindsym $mod+Shift+Print exec scrot --focused ~/Pictures/%Y-%m-%d_%H-%M-%S.png
+bindsym $mod+Print exec --no-startup-id scrot ~/Pictures/%Y-%m-%d_%H-%M-%S.png
+bindsym $mod+Shift+Print exec --no-startup-id scrot --focused ~/Pictures/%Y-%m-%d_%H-%M-%S.png
 
 
 # Pulse Audio controls
