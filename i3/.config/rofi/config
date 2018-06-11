@@ -1,0 +1,29 @@
+rofi.width:           100
+rofi.lines:           5
+rofi.font:            Ubuntu 32
+rofi.bw:              0
+rofi.padding:         500
+rofi.matching:        fuzzy
+! rofi.sort             true
+! rofi.levenshtein-sort true
+rofi.separator-style: none
+rofi.hide-scrollbar:  true
+rofi.show-icons:      true
+rofi.drun-icon-theme: ePapirus
+
+!   #282c34
+!   #404552
+!   #383c4a
+!   #4b5162
+!   #5294e2
+!   #7c818c
+!   #abb2bf
+
+
+! State:           'bg',          'fg',          'bgalt',        'hlbg',        'hlfg'
+rofi.color-normal: argb:00282c34, argb:ff7c818c, argb:00282c34,  argb:00383c4a, argb:ffabb2bf
+rofi.color-urgent: argb:00282c34, argb:ffdc322f, argb:00282c34,  argb:00dc322f, argb:ffdc322f
+rofi.color-active: argb:00282c34, argb:ff5294e2, argb:00282c34,  argb:005294e2, argb:ff5294e2
+
+!                  'background',  'border',      'separator'
+rofi.color-window: argb:ee282c34, argb:ee282c34, argb:ee282c34
