@@ -91,7 +91,7 @@ interval=5
 [load_average]
 full_text=
 color=#C678DD
-label=
+label=
 interval=10
 
 # Date Time
