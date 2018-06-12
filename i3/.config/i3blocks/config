@@ -37,7 +37,7 @@ markup=pango
 [separator]
 [weather]
 full_text=
-color=#F0D3B1
+color=#969896
 command=$HOME/.config/i3blocks/blocklets/weather
 instance=Bekasi
 markup=pango
@@ -51,7 +51,7 @@ interval=1800
 [separator]
 [volume]
 full_text=
-color=#61AFEF
+color=#81a2be
 label=
 instance=Master
 interval=1
@@ -63,9 +63,9 @@ signal=10
 [separator]
 [memory]
 full_text=
-color=#56B6C2
+color=#8abeb7
 label=
-interval=10
+interval=5
 
 # Disk usage
 #
@@ -77,13 +77,13 @@ interval=10
 full_text=
 color=#98C379
 label=
-interval=30
+interval=150
 
 [separator]
-[wifi]
+[load_average]
 full_text=
-label=
-instance=wlp0s18f2u2
+color=#b294bb
+label=
 interval=10
 
 # Temperature
@@ -92,17 +92,26 @@ interval=10
 # The script may be called with -w and -c switches to specify thresholds,
 # see the script for details.
 [separator]
-[temperature]
+[cpu_temp]
+command=/usr/lib/i3blocks/temperature --chip atk0110-acpi-0
 full_text=
-color=#E06C75
-label=
+color=#cc6666
+label= CPU  
+interval=5
+
+[gpu_temp]
+command=/usr/lib/i3blocks/temperature --chip amdgpu-pci-0100
+full_text=
+color=#de935f
+label= GPU  
 interval=5
 
 [separator]
-[load_average]
+[wifi]
 full_text=
-color=#C678DD
-label=
+label=
+color=#f0c674
+instance=wlp0s18f2u2
 interval=10
 
 # Date Time
@@ -110,7 +119,7 @@ interval=10
 [separator]
 [time]
 full_text=
-color=#CFD7E6
+color=#c5c8c6
 command=date '+ %Y-%m-%d     %H:%M:%S'
 interval=1
 
