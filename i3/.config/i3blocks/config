@@ -32,6 +32,17 @@ align=center
 markup=pango
 
 
+# Weather
+# 
+[separator]
+[weather]
+full_text=
+color=#F0D3B1
+command=$HOME/.config/i3blocks/blocklets/weather
+instance=Bekasi
+markup=pango
+interval=once
+
 # Volume indicator
 #
 # The first parameter sets the step (and units to display)

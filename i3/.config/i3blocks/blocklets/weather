@@ -1,0 +1,35 @@
+#!/bin/bash
+
+WEATHER_APPID="3b64664ba27d101d9e8691b86bbefb6b"
+WEATHER_CITY=$BLOCK_INSTANCE
+WEATHER_URL="http://api.openweathermap.org/data/2.5/weather?q=$WEATHER_CITY&units=metric&type=accurate&APPID=$WEATHER_APPID"
+WEATHER_DATA=$(curl -s $WEATHER_URL)
+
+declare -A ICON_MAP
+
+ICON_MAP["01d"]=
+ICON_MAP["02d"]=
+ICON_MAP["03d"]=
+ICON_MAP["04d"]=
+ICON_MAP["09d"]=
+ICON_MAP["10d"]=
+ICON_MAP["11d"]=
+ICON_MAP["13d"]=
+ICON_MAP["50d"]=
+
+ICON_MAP["01n"]=
+ICON_MAP["02n"]=
+ICON_MAP["03n"]=
+ICON_MAP["04n"]=
+ICON_MAP["09n"]=
+ICON_MAP["10n"]=
+ICON_MAP["11n"]=
+ICON_MAP["13n"]=
+ICON_MAP["50n"]=
+
+
+WEATHER_TEMP=$(echo $WEATHER_DATA | jq '.main.temp')
+WEATHER_ICON=$(echo $WEATHER_DATA | jq -r '.weather[0].icon')
+
+echo "${ICON_MAP[$WEATHER_ICON]} $WEATHER_TEMP °C"
+
