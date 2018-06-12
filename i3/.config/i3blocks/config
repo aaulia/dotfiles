@@ -41,7 +41,7 @@ color=#F0D3B1
 command=$HOME/.config/i3blocks/blocklets/weather
 instance=Bekasi
 markup=pango
-interval=once
+interval=1800
 
 # Volume indicator
 #
