@@ -27,7 +27,7 @@
 full_text=
 command=/usr/lib/i3blocks/$BLOCK_NAME
 separator=false
-separator_block_width=12
+separator_block_width=15
 align=center
 markup=pango
 
@@ -41,7 +41,7 @@ markup=pango
 [volume]
 full_text=
 color=#61AFEF
-label=
+label=
 instance=Master
 interval=1
 signal=10
@@ -100,7 +100,7 @@ interval=10
 [time]
 full_text=
 color=#CFD7E6
-command=date '+ %Y-%m-%d    %H:%M:%S'
+command=date '+ %Y-%m-%d     %H:%M:%S'
 interval=1
 
 
