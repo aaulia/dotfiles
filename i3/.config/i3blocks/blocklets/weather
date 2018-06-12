@@ -1,6 +1,6 @@
 #!/bin/bash
 
-WEATHER_APPID="3b64664ba27d101d9e8691b86bbefb6b"
+WEATHER_APPID="$(cat $HOME/.owm_appid)"
 WEATHER_CITY=$BLOCK_INSTANCE
 WEATHER_URL="http://api.openweathermap.org/data/2.5/weather?q=$WEATHER_CITY&units=metric&type=accurate&APPID=$WEATHER_APPID"
 WEATHER_DATA=$(curl -s $WEATHER_URL)
@@ -28,8 +28,12 @@ ICON_MAP["13n"]=
 ICON_MAP["50n"]=
 
 
+WEATHER_CODE=$(echo $WEATHER_DATA | jq '.cod')
 WEATHER_TEMP=$(echo $WEATHER_DATA | jq '.main.temp')
 WEATHER_ICON=$(echo $WEATHER_DATA | jq -r '.weather[0].icon')
 
-echo "${ICON_MAP[$WEATHER_ICON]} $WEATHER_TEMP °C"
-
+if [ $WEATHER_CODE -eq 200 ]; then
+	echo "${ICON_MAP[$WEATHER_ICON]} $WEATHER_TEMP °C"
+else
+	echo " -- °C"
+fi
