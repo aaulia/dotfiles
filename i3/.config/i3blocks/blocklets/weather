@@ -1,39 +1,34 @@
 #!/bin/bash
 
-WEATHER_APPID="$(cat $HOME/.owm_appid)"
-WEATHER_CITY=$BLOCK_INSTANCE
-WEATHER_URL="http://api.openweathermap.org/data/2.5/weather?q=$WEATHER_CITY&units=metric&type=accurate&APPID=$WEATHER_APPID"
-WEATHER_DATA=$(curl -s $WEATHER_URL)
+declare -rA ICON_MAP=(
+#     DAY      NIGHT
+    ["01d"]=B ["01n"]=C
+    ["02d"]=H ["02n"]=I
+    ["03d"]=N ["03n"]=N
+    ["04d"]=Y ["04n"]=Y
+    ["09d"]=R ["09n"]=R
+    ["10d"]=X ["10n"]=X
+    ["11d"]=P ["11n"]=P
+    ["13d"]=W ["13n"]=W
+    ["50d"]=J ["50n"]=K
+)
 
-declare -A ICON_MAP
-
-ICON_MAP["01d"]=
-ICON_MAP["02d"]=
-ICON_MAP["03d"]=
-ICON_MAP["04d"]=
-ICON_MAP["09d"]=
-ICON_MAP["10d"]=
-ICON_MAP["11d"]=
-ICON_MAP["13d"]=
-ICON_MAP["50d"]=
-
-ICON_MAP["01n"]=
-ICON_MAP["02n"]=
-ICON_MAP["03n"]=
-ICON_MAP["04n"]=
-ICON_MAP["09n"]=
-ICON_MAP["10n"]=
-ICON_MAP["11n"]=
-ICON_MAP["13n"]=
-ICON_MAP["50n"]=
+declare -r HTTP_OK=200
 
 
-WEATHER_CODE=$(echo $WEATHER_DATA | jq '.cod')
-WEATHER_TEMP=$(echo $WEATHER_DATA | jq '.main.temp')
-WEATHER_ICON=$(echo $WEATHER_DATA | jq -r '.weather[0].icon')
+declare -r WEATHER_APPID="$(cat $HOME/.owm_appid)"
+declare -r WEATHER_CITY=$BLOCK_INSTANCE
+declare -r WEATHER_URL="http://api.openweathermap.org/data/2.5/weather?q=$WEATHER_CITY&units=metric&type=accurate&APPID=$WEATHER_APPID"
+declare -r WEATHER_DATA=$(curl -s $WEATHER_URL)
 
-if [ $WEATHER_CODE -eq 200 ]; then
-	echo "${ICON_MAP[$WEATHER_ICON]} $WEATHER_TEMP °C"
+
+declare -r RESULT_CODE=$(echo $WEATHER_DATA | jq '.cod')
+declare -r TEMPERATURE=$(echo $WEATHER_DATA | jq '.main.temp')
+declare -r ICONMAP_KEY=$(echo $WEATHER_DATA | jq -r '.weather[0].icon')
+
+
+if [ $RESULT_CODE -eq $HTTP_OK ]; then
+	echo "<span font_desc='Meteocons Bold'>${ICON_MAP[$ICONMAP_KEY]}</span> $TEMPERATURE °C"
 else
 	echo " -- °C"
 fi
