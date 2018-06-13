@@ -49,4 +49,4 @@ MUTE_STATUS=$(pulsemixer --get-mute)
 
 
 
-echo "<span alpha='$OPACITY%'>┫$NORMAL_VOLUME%┣$VOL_BAR┫</span>"
+echo "<span alpha='$OPACITY%'>┣$VOL_BAR┫$NORMAL_VOLUME%</span>"
