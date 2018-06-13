@@ -43,7 +43,7 @@ command=$HOME/.config/i3blocks/blocklets/volume
 full_text=
 color=#81a2be
 label=
-interval=1
+interval=5
 
 # Memory usage
 #
