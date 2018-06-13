@@ -32,31 +32,6 @@ align=center
 markup=pango
 
 
-# Weather
-# 
-[separator]
-[weather]
-full_text=
-color=#969896
-command=$HOME/.config/i3blocks/blocklets/weather
-instance=Bekasi
-markup=pango
-interval=1800
-
-# Volume indicator
-#
-# The first parameter sets the step (and units to display)
-# The second parameter overrides the mixer selection
-# See the script for details.
-[separator]
-[volume]
-full_text=
-color=#81a2be
-label=
-instance=Master
-interval=1
-signal=10
-
 # Memory usage
 #
 # The type defaults to "mem" if the instance is not specified.
@@ -113,6 +88,31 @@ label=
 color=#f0c674
 instance=wlp0s18f2u2
 interval=10
+
+# Volume indicator
+#
+# The first parameter sets the step (and units to display)
+# The second parameter overrides the mixer selection
+# See the script for details.
+[separator]
+[volume]
+full_text=
+color=#81a2be
+label=
+instance=Master
+interval=1
+signal=10
+
+# Weather
+# 
+[separator]
+[weather]
+full_text=
+color=#c5c8c6
+command=$HOME/.config/i3blocks/blocklets/weather
+instance=Bekasi
+markup=pango
+interval=1800
 
 # Date Time
 #
