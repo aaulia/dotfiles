@@ -83,7 +83,7 @@ interval=150
 [load_average]
 full_text=
 color=#b294bb
-label=
+label=
 interval=10
 
 # Temperature
@@ -96,14 +96,14 @@ interval=10
 command=/usr/lib/i3blocks/temperature --chip atk0110-acpi-0
 full_text=
 color=#cc6666
-label= CPU  
+label= 
 interval=5
 
 [gpu_temp]
 command=/usr/lib/i3blocks/temperature --chip amdgpu-pci-0100
 full_text=
 color=#de935f
-label= GPU  
+label= 
 interval=5
 
 [separator]
