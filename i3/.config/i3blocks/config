@@ -27,7 +27,7 @@
 full_text=
 command=/usr/lib/i3blocks/$BLOCK_NAME
 separator=false
-separator_block_width=15
+separator_block_width=16
 align=center
 markup=pango
 
@@ -120,9 +120,17 @@ interval=1800
 [time]
 full_text=
 color=#c5c8c6
-command=date '+ %Y-%m-%d     %H:%M:%S'
-interval=1
+label=
+command=date '+%d-%m-%Y'
+interval=300
 
+[separator]
+[time]
+full_text=
+color=#c5c8c6
+label=
+command=date '+%H:%M:%S'
+interval=1
 
 
 # [memory]
