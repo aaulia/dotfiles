@@ -1,0 +1,52 @@
+#!/bin/bash
+
+
+case $BLOCK_BUTTON in 
+    1) pulsemixer --toggle-mute ;;
+    4) pulsemixer --change-volume +5 ;;
+    5) pulsemixer --change-volume -5 ;;
+esac
+
+
+
+NORMAL_VOLUME=$(pulsemixer --get-volume | awk '{ print $1 }')
+if [[ NORMAL_VOLUME -gt 100 ]]; then 
+    NORMAL_VOLUME=100
+fi
+
+SCALED_VOLUME=$(( NORMAL_VOLUME / 10 ))
+HALVED_VOLUME=0
+SILENT_VOLUME=$(( 10 - SCALED_VOLUME ))
+
+if [[ $(( NORMAL_VOLUME % 10 )) -gt 0 ]]; then
+    HALVED_VOLUME=1
+
+    if [[ SILENT_VOLUME -gt 0 ]]; then 
+        SILENT_VOLUME=$(( SILENT_VOLUME - 1 ))
+    fi
+fi
+
+
+
+if [[ SCALED_VOLUME -gt 0 ]]; then 
+    VOL_BAR+=$(printf '█%.0s' $(seq 1 $SCALED_VOLUME))
+fi
+
+if [[ HALVED_VOLUME -eq 1 ]]; then 
+    VOL_BAR+="<span alpha='75%'>█</span>"
+fi 
+
+if [[ SILENT_VOLUME -gt 0 ]]; then
+    VOL_BAR+="<span alpha='50%'>"
+    VOL_BAR+="$(printf '█%.0s' $(seq 1 $SILENT_VOLUME))"
+    VOL_BAR+="</span>"
+fi
+
+
+
+MUTE_STATUS=$(pulsemixer --get-mute)
+[[ MUTE_STATUS -eq 0 ]] && OPACITY=100 || OPACITY=75
+
+
+
+echo "<span alpha='$OPACITY%'>┫$NORMAL_VOLUME%┣$VOL_BAR┫</span>"

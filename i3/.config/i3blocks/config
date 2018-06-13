@@ -96,12 +96,11 @@ interval=10
 # See the script for details.
 [separator]
 [volume]
+command=$HOME/.config/i3blocks/blocklets/volume
 full_text=
 color=#81a2be
-label=
-instance=Master
+label=
 interval=1
-signal=10
 
 # Weather
 # 
