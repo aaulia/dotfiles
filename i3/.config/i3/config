@@ -223,3 +223,4 @@ smart_gaps on
 # exec_always --no-startup-id feh /home/aaulia/Pictures/wallpapers/rainy_day.png --bg-fill
 exec_always --no-startup-id betterlockscreen -w
 exec --no-startup-id compton --config ~/.config/compton.conf
+exec --no-startup-id indicator-kdeconnect
