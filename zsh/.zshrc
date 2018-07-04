@@ -76,6 +76,10 @@ export ANDROID_EMULATOR_USE_SYSTEM_LIBS=1
 export NPM_CONFIG_PREFIX=~/.npm-global
 
 
+# LS_COLORS
+eval "$(dircolors -b)"
+
+
 # Paths
 export FLUTTER_HOME=$HOME/Development/flutter/bin
 export ANDROID_HOME=$HOME/Android/Sdk
