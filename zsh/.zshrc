@@ -84,5 +84,6 @@ eval "$(dircolors -b)"
 export FLUTTER_HOME=$HOME/Development/flutter/bin
 export ANDROID_HOME=$HOME/Android/Sdk
 export ANDROID_SDK_ROOT=$ANDROID_HOME
+export ANDROID_PLATFORM_TOOLS=$HOME/Android/Sdk/platform-tools
 export NPM_GLOBAL_HOME=$HOME/.npm-global/bin
-export PATH=$FLUTTER_HOME:$ANDROID_SDK_ROOT:$NPM_GLOBAL_HOME:$PATH
+export PATH=$FLUTTER_HOME:$ANDROID_PLATFORM_TOOLS:$ANDROID_SDK_ROOT:$NPM_GLOBAL_HOME:$PATH
