@@ -99,7 +99,7 @@ interval=5
 full_text=
 label=
 color=#f0c674
-instance=wlp0s18f2u2
+instance=wlp0s18f2u4
 interval=10
 
 # Weather
