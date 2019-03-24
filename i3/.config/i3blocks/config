@@ -95,12 +95,19 @@ label= 
 interval=5
 
 [separator]
-[wifi]
-full_text=
-label=
-color=#f0c674
-instance=wlp2s0u1u1
-interval=10
+#[wifi]
+#full_text=
+#label=
+#color=#f0c674
+#instance=wlp2s0u1u1
+#interval=10
+
+[iface]
+label=
+instance=enp3s0
+#command=$XDG_DATA_HOME/i3blocks/iface
+color=#859900
+interval=30
 
 # Weather
 # 
