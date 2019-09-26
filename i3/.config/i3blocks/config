@@ -25,7 +25,7 @@
 # The top properties below are applied to every block, but can be overridden.
 # Each block command defaults to the script name to avoid boilerplate.
 full_text=
-command=/usr/lib/i3blocks/$BLOCK_NAME
+command=$HOME/.config/i3blocks/i3blocks-contrib/$BLOCK_NAME/$BLOCK_NAME
 separator=false
 separator_block_width=16
 align=center
@@ -52,7 +52,7 @@ interval=5
 [memory]
 full_text=
 color=#8abeb7
-label=
+label= 
 interval=5
 
 # Disk usage
@@ -64,14 +64,14 @@ interval=5
 [disk]
 full_text=
 color=#98C379
-label=
+label= 
 interval=150
 
 [separator]
 [load_average]
 full_text=
 color=#b294bb
-label=
+label= 
 interval=10
 
 # Temperature
@@ -84,26 +84,26 @@ interval=10
 command=$HOME/.config/i3blocks/blocklets/temperature --chip it8620-isa-0228 --temp temp2_input
 full_text=
 color=#cc6666
-label= 
+label=  
 interval=5
 
 [gpu_temp]
 command=$HOME/.config/i3blocks/blocklets/temperature --chip amdgpu-pci-0100
 full_text=
 color=#de935f
-label= 
+label=  
 interval=5
 
 [separator]
 #[wifi]
 #full_text=
-#label=
+#label= 
 #color=#f0c674
 #instance=wlp2s0u1u1
 #interval=10
 
 [iface]
-label=
+label= 
 instance=enp3s0
 #command=$XDG_DATA_HOME/i3blocks/iface
 color=#859900
@@ -126,7 +126,7 @@ interval=1800
 [time]
 full_text=
 color=#c5c8c6
-label=
+label= 
 command=date '+%d-%m-%Y'
 interval=300
 
@@ -134,7 +134,7 @@ interval=300
 [time]
 full_text=
 color=#c5c8c6
-label=
+label= 
 command=date '+%H:%M:%S'
 interval=1
 
