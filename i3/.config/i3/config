@@ -213,7 +213,9 @@ bindsym XF86AudioPrev exec playerctl previous
 
 # Window rules
 for_window [class="^.*"] border pixel 0
+for_window [title="Welcome to Android Studio"] floating enable
 for_window [title="Android Virtual Device Manager"] floating enable
+for_window [title="ASUS_X00TD"] floating enable, border pixel 1
 for_window [title="^Android Emulator - *"] floating enable, border pixel 1
 
 
@@ -224,8 +226,9 @@ smart_gaps on
 
 
 # Autostart
-# exec_always --no-startup-id feh /home/aaulia/Pictures/wallpapers/rainy_day.png --bg-fill
-exec_always --no-startup-id betterlockscreen -w
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+exec_always --no-startup-id exec autorandr --load normal
+exec_always --no-startup-id "sh -c 'sleep 1; exec betterlockscreen -w'"
 exec --no-startup-id compton --config ~/.config/compton.conf
 exec --no-startup-id kdeconnect-indicator
 exec --no-startup-id radeon-profile
