@@ -70,11 +70,5 @@ source /usr/share/fzf/key-bindings.zsh
 alias ls='ls --color=auto'
 
 
-# Environment
-export EDITOR=micro
-export ANDROID_EMULATOR_USE_SYSTEM_LIBS=1
-export NPM_CONFIG_PREFIX=~/.npm-global
-
-
 # LS_COLORS
 eval "$(dircolors -b)"

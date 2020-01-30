@@ -1,3 +1,8 @@
+# Environment
+export EDITOR=micro
+export ANDROID_EMULATOR_USE_SYSTEM_LIBS=1
+export NPM_CONFIG_PREFIX=~/.npm-global
+
 # Paths
 export FLUTTER_HOME=$HOME/Development/flutter/bin
 export ANDROID_HOME=$HOME/Android/SDK
