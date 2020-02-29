@@ -213,6 +213,8 @@ bindsym XF86AudioPrev exec playerctl previous
 
 # Window rules
 for_window [class="^.*"] border pixel 0
+for_window [title="win0"] floating enable
+for_window [title="Android Studio Setup Wizard"] floating enable
 for_window [title="Welcome to Android Studio"] floating enable
 for_window [title="Android Virtual Device Manager"] floating enable
 for_window [title="ASUS_X00TD"] floating enable, border pixel 1
