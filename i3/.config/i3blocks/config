@@ -81,14 +81,14 @@ interval=10
 # see the script for details.
 [separator]
 [cpu_temp]
-command=$HOME/.config/i3blocks/blocklets/temperature --chip it8620-isa-0228 --temp temp2_input
+command=$HOME/.config/i3blocks/blocklets/temperature --chip k10temp-pci-00c3
 full_text=
 color=#cc6666
 label=  
 interval=5
 
 [gpu_temp]
-command=$HOME/.config/i3blocks/blocklets/temperature --chip amdgpu-pci-0100
+command=$HOME/.config/i3blocks/blocklets/temperature --chip amdgpu-pci-2600
 full_text=
 color=#de935f
 label=  
@@ -104,7 +104,7 @@ interval=5
 
 [iface]
 label= 
-instance=enp3s0
+instance=enp34s0
 #command=$XDG_DATA_HOME/i3blocks/iface
 color=#859900
 interval=30
