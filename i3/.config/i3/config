@@ -219,6 +219,7 @@ for_window [title="Welcome to Android Studio"] floating enable
 for_window [title="Android Virtual Device Manager"] floating enable
 for_window [title="ASUS_X00TD"] floating enable, border pixel 1
 for_window [title="^Android Emulator - *"] floating enable, border pixel 1
+for_window [title="Piper"] floating enable
 
 
 # Gaps
