@@ -62,8 +62,14 @@ interval=5
 # (defaults to 10 for 10%).
 [separator]
 [disk]
-full_text=
 color=#98C379
+label= 
+interval=150
+
+[separator]
+[disk]
+color=#98C379
+DIR=/mnt/data
 label= 
 interval=150
 
