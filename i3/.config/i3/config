@@ -232,6 +232,6 @@ smart_gaps on
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec_always --no-startup-id exec autorandr --load normal
 exec_always --no-startup-id "sh -c 'sleep 1; exec betterlockscreen -w'"
-exec --no-startup-id compton --config ~/.config/compton.conf
+exec --no-startup-id picom --config ~/.config/picom.conf
 exec --no-startup-id kdeconnect-indicator
 exec --no-startup-id radeon-profile
