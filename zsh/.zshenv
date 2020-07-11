@@ -1,4 +1,5 @@
 # Environment
+export TERMINAL=kitty
 export EDITOR=micro
 export ANDROID_EMULATOR_USE_SYSTEM_LIBS=1
 export NPM_CONFIG_PREFIX=~/.npm-global
