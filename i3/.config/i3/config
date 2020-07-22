@@ -229,7 +229,7 @@ for_window [title="Android Studio Setup Wizard"] floating enable
 for_window [title="Welcome to Android Studio"] floating enable
 for_window [title="Android Virtual Device Manager"] floating enable border pixel 4
 for_window [title="^Emulator$"] floating enable border pixel 4 move scratchpad
-for_window [title="^Android Emulator"] floating enable border pixel 4 move scratchpad
+for_window [title="^Android Emulator"] floating enable border pixel 4 move scratchpad scratchpad show
 for_window [class="jetbrains-studio" title="^win\d+$"] focus
 
 for_window [title="Piper"] floating enable border pixel 4
