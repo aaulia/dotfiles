@@ -215,6 +215,7 @@ bindsym XF86AudioPrev exec playerctl previous
 bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+minus scratchpad show
 bindsym $mod+F9 [title="^Android Emulator"] scratchpad show
+bindsym $mod+F10 [title="^Emulator$"] scratchpad show
 
 
 # Borders
