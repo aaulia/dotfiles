@@ -192,7 +192,7 @@ bar {
 
 # Special Keys
 bindsym XF86Sleep exec betterlockscreen --lock dimblur
-bindsym XF86HomePage exec firefox
+# bindsym XF86HomePage exec firefox
 bindsym XF86Search exec rofi -show drun
 bindsym $mod+Print exec --no-startup-id scrot ~/Pictures/%Y-%m-%d_%H-%M-%S.png
 bindsym $mod+Shift+Print exec --no-startup-id scrot --focused ~/Pictures/%Y-%m-%d_%H-%M-%S.png
@@ -252,3 +252,4 @@ exec_always --no-startup-id "sh -c 'sleep 1; exec betterlockscreen -w'"
 exec --no-startup-id picom --config ~/.config/picom.conf
 exec --no-startup-id kdeconnect-indicator
 exec --no-startup-id radeon-profile
+exec --no-startup-id blueberry-tray
