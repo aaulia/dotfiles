@@ -73,3 +73,4 @@ alias ls='ls --color=auto'
 
 # LS_COLORS
 eval "$(dircolors -b)"
+autoload -U +X bashcompinit && bashcompinit
